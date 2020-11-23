@@ -5,6 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import App from './container/App';
 import reportWebVitals from './reportWebVitals';
 import ConfigStore from "./store/store";
+import './index.scss';
 
 const rootElement = document.getElementById("root");
 const store = ConfigStore();
