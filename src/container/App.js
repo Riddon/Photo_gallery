@@ -1,19 +1,24 @@
 import React, {useEffect} from 'react';
-import { useDispatch } from 'react-redux';
-import {getPhotoList} from '../services/photoGalleryAPI';
-import * as photoGalleryActions from '../actions/photoGalleryActions';
-import RoutesPage from "../routes/RoutesPage";
+import {useDispatch} from "react-redux";
 import MainHeader from "../components/Layouts/MainHeader/MainHeader";
+import RoutesPage from "../routes/RoutesPage";
+import LocalStorage from "../services/LocalStorage";
+import {getPhoto} from "../services/photoGalleryAPI";
+import * as favoriteActions from "../actions/favoritePhotoActions";
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        getPhotoList(1, 10).then((result) => {
-            console.log('Result -->', result.data);
+        const array = LocalStorage.getFromLocalStorage('favorite');
 
-            dispatch(photoGalleryActions.getList(result.data));
-        })
+        if(array) {
+            array.forEach(item => {
+                getPhoto(item.id).then(result => {
+                    dispatch(favoriteActions.addPhoto(result.data))
+                });
+            });
+        }
     });
 
     return (

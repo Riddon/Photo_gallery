@@ -1,0 +1,33 @@
+
+.photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 320px;
+    margin: auto;
+
+    @media screen and (min-width: 640px) {
+      max-width: 600px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 1000px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+
+    & > img {
+      max-width: 100%;
+      max-height: 100vh;
+    }
+  }
+}

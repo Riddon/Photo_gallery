@@ -22,10 +22,10 @@ export default class LocalStorage {
         this.setData(dataName, arrayData);
     }
 
-    static deleteFromLocalStorage(dataName, article) {
+    static deleteFromLocalStorage(dataName, id) {
         const arrayCards = LocalStorage.getFromLocalStorage(dataName);
         let updateCards = arrayCards
-            .filter(element => element.article !== article);
+            .filter(element => element.id !== id);
 
         this.setData(dataName, updateCards);
     }

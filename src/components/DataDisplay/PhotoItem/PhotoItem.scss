@@ -48,15 +48,16 @@
 
   &-btn-favorite {
     display: flex;
+    padding: 0;
     font-size: 20px;
     border: none;
-    background: transparent;
+    background: #fff;
 
-    &:focus, &:active {
-      border: none;
+    &:focus {
+      outline: 0
     }
 
-    & > .far {
+    & > .fa-star {
       display: block;
       cursor: pointer;
     }
