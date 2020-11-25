@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Riddon/Photo_gallery/static/css/main.c2d9e97c.chunk.css",
+    "main.js": "/Riddon/Photo_gallery/static/js/main.70db58d8.chunk.js",
+    "main.js.map": "/Riddon/Photo_gallery/static/js/main.70db58d8.chunk.js.map",
+    "runtime-main.js": "/Riddon/Photo_gallery/static/js/runtime-main.92b040d1.js",
+    "runtime-main.js.map": "/Riddon/Photo_gallery/static/js/runtime-main.92b040d1.js.map",
+    "static/js/2.7ed62f10.chunk.js": "/Riddon/Photo_gallery/static/js/2.7ed62f10.chunk.js",
+    "static/js/2.7ed62f10.chunk.js.map": "/Riddon/Photo_gallery/static/js/2.7ed62f10.chunk.js.map",
+    "static/js/3.0fb5eb6b.chunk.js": "/Riddon/Photo_gallery/static/js/3.0fb5eb6b.chunk.js",
+    "static/js/3.0fb5eb6b.chunk.js.map": "/Riddon/Photo_gallery/static/js/3.0fb5eb6b.chunk.js.map",
+    "index.html": "/Riddon/Photo_gallery/index.html",
+    "static/css/main.c2d9e97c.chunk.css.map": "/Riddon/Photo_gallery/static/css/main.c2d9e97c.chunk.css.map",
+    "static/js/2.7ed62f10.chunk.js.LICENSE.txt": "/Riddon/Photo_gallery/static/js/2.7ed62f10.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92b040d1.js",
+    "static/js/2.7ed62f10.chunk.js",
+    "static/css/main.c2d9e97c.chunk.css",
+    "static/js/main.70db58d8.chunk.js"
+  ]
+}
