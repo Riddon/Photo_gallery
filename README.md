@@ -22,3 +22,9 @@ For start project you need to do next:
 - Then type `npm install` or `npm i`.
 
 - After install you can start the game - just type `npm start`.
+
+###### or 
+
+Click on https://riddon.github.io/Photo_gallery/
+
+Enjoy and train you mind!!!
