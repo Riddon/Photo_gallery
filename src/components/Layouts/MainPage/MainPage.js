@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import PhotoList from "../../DataDisplay/PhotoList/PhotoList";
-import {getPhotoList} from "../../../services/photoGalleryAPI";
 import * as photoGalleryActions from "../../../actions/photoGalleryActions";
 import PaginationBlock from "../PaginationBlock/PaginationBlock";
 
@@ -13,11 +12,7 @@ const MainPage = () => {
     const [photoAmount, setPhotoAmount] = useState(10);
 
     useEffect(() => {
-        getPhotoList(photoPage, photoAmount).then((result) => {
-            console.log('Result -->', result.data);
-
-            dispatch(photoGalleryActions.getList(result.data));
-        })
+        dispatch(photoGalleryActions.getList(photoPage, photoAmount));
     }, [dispatch, photoPage, photoAmount]);
 
     const onChangePage = (val) => {
