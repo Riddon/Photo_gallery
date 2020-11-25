@@ -1,0 +1,44 @@
+.pagination {
+  display: flex;
+  margin-top: 30px;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__btn-block {
+    margin-right: 60px;
+  }
+
+  &__btn {
+    padding: 6px 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #222222;
+    border-radius: 3px;
+    border: 2px solid #222222;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+      background: #fff;
+    }
+
+    &--prev {
+      margin-right: 10px;
+    }
+  }
+
+  &__photo-amount {
+    padding: 6px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 2px solid #222222;
+
+    &-title {
+      margin-right: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
