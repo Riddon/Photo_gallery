@@ -1,4 +1,4 @@
 export const routes = {
-    home: {name: 'Home', href: '/'},
-    favorites: {name: 'My Favorites', href: '/favorites'}
+    home: {name: 'Home', href: '/Riddon/Photo_gallery/'},
+    favorites: {name: 'My Favorites', href: '/Riddon/Photo_gallery/favorites'}
 };
