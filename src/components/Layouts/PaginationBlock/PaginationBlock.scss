@@ -5,8 +5,16 @@
   align-items: center;
   justify-content: flex-end;
 
-  &__btn-block {
+  &__page {
+    display: flex;
+    align-items: center;
     margin-right: 60px;
+
+    &-title {
+      margin: 0 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
 
   &__btn {
@@ -21,10 +29,6 @@
     &:hover {
       color: #000;
       background: #fff;
-    }
-
-    &--prev {
-      margin-right: 10px;
     }
   }
 
