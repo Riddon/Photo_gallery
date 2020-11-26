@@ -10,11 +10,10 @@ const App = () => {
 
     useEffect(() => {
         const array = LocalStorage.getFromLocalStorage('favorite');
+        console.log(array);
 
         if(array) {
-            array.forEach(item => {
-                dispatch(favoriteActions.getPhotoFromServer(item.id));
-            });
+            dispatch(favoriteActions.getPhotoList(array));
         }
     });
 

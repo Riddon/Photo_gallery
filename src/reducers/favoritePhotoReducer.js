@@ -6,6 +6,12 @@ const initState = {
 
 const favoritePhotoReducer = (state = initState, action) => {
     switch (action.type) {
+        case types.ADD_FAVORITE_LIST:
+            return {
+                ...state,
+                ...{ favoriteList: action.payload }
+            };
+
         case types.ADD_FAVORITE_PHOTO:
             return {
                 ...state,
