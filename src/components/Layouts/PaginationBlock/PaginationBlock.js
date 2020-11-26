@@ -18,7 +18,7 @@ const PaginationBlock = ({onChangePage, photoPage, photoAmount, onChangeAmount})
     return (
         <>
             <div className="pagination">
-                <div className="pagination__btn-block">
+                <div className="pagination__page">
                     <button
                         className="pagination__btn--prev pagination__btn"
                         onClick={moveToPrevPage}
@@ -26,6 +26,11 @@ const PaginationBlock = ({onChangePage, photoPage, photoAmount, onChangeAmount})
                     >
                         prev
                     </button>
+
+                    <div className="pagination__page-title">
+                        {photoPage}
+                    </div>
+
                     <button
                         className="pagination__btn--next pagination__btn"
                         onClick={moveToNextPage}

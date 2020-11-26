@@ -4,17 +4,30 @@ import MainHeader from "../components/Layouts/MainHeader/MainHeader";
 import RoutesPage from "../routes/RoutesPage";
 import LocalStorage from "../services/LocalStorage";
 import * as favoriteActions from "../actions/favoritePhotoActions";
+import * as pageActions from "../actions/photoPageActions";
+import * as amountActions from "../actions/photoAmountActions";
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
         const array = LocalStorage.getFromLocalStorage('favorite');
-
         if(array) {
-            array.forEach(item => {
-                dispatch(favoriteActions.getPhotoFromServer(item.id));
-            });
+            dispatch(favoriteActions.getPhotoList(array));
+        }
+
+        const page = LocalStorage.getFromLocalStorage('page');
+        if(page) {
+            dispatch(pageActions.setPage(page));
+        } else {
+            LocalStorage.setData('page', 1);
+        }
+
+        const amount = LocalStorage.getFromLocalStorage('amount');
+        if(amount) {
+            dispatch(amountActions.setAmount(amount));
+        } else {
+            LocalStorage.setData('amount', '10');
         }
     });
 

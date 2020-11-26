@@ -1,17 +1,11 @@
 import * as types from "../constants/constTypes";
-import {getPhoto} from "../services/photoGalleryAPI";
 
-export function getPhotoFromServer(id) {
+export function getPhotoList(list) {
 
-    return async (dispatch) => {
-
-        const dataPhotoItem = await getPhoto(id).then(result => {
-            return result.data;
-        });
-
+    return (dispatch) => {
         dispatch({
-            type: types.ADD_FAVORITE_PHOTO,
-            payload: dataPhotoItem
+            type: types.ADD_FAVORITE_LIST,
+            payload: list
         });
     };
 }
