@@ -15,7 +15,9 @@ const MainPage = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(photoGalleryActions.getList(photoPage, photoAmount));
+        if(photoPage && photoAmount) {
+            dispatch(photoGalleryActions.getList(photoPage, photoAmount));
+        }
     }, [dispatch, photoPage, photoAmount]);
 
     const onChangePage = (val) => {

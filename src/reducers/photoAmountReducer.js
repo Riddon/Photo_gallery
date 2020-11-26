@@ -1,7 +1,7 @@
 import * as types from "../constants/constTypes";
 
 const initState = {
-    photoAmount: '10'
+    photoAmount: ''
 };
 
 const photoAmountReducer = (state = initState, action) => {

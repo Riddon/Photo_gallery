@@ -1,7 +1,7 @@
 import * as types from "../constants/constTypes";
 
 const initState = {
-    photoPage: 1
+    photoPage: null
 };
 
 const photoPageReducer = (state = initState, action) => {
