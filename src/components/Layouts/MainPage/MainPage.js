@@ -46,6 +46,7 @@ const MainPage = () => {
                 />
                 <PhotoList
                     photoList={photoList}
+                    homePage={true}
                 />
             </div>
         </>

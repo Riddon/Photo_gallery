@@ -7,7 +7,7 @@ import LocalStorage from "../../../services/LocalStorage";
 import * as favoriteActions from "../../../actions/favoritePhotoActions";
 import EmptyField from "../../Layouts/EmptyField/EmptyField";
 
-const PhotoList = ({photoList}) => {
+const PhotoList = ({photoList, homePage}) => {
 
     const dispatch = useDispatch();
     const favoriteList = useSelector(state => state.favoritePhotoReducer.favoriteList);
@@ -76,7 +76,11 @@ const PhotoList = ({photoList}) => {
             </>
         );
     } else {
-        return <EmptyField />
+        return (
+            <>
+                {!homePage && <EmptyField /> }
+            </>
+        );
     }
 
 
