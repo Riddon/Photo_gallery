@@ -12,7 +12,7 @@ const MainHeader = () => {
                     <nav className="header__nav">
                         <ul className="header__nav-list">
                             <li className="header__nav-list-item">
-                                <NavLink activeClassName='is-active' to={routes.home.href}>
+                                <NavLink activeClassName='is-active' exact={true} to={routes.home.href}>
                                     {routes.home.name}
                                     <div className="header__nav-list-item-hover-line">
                                     </div>
