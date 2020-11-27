@@ -21,6 +21,7 @@ const App = () => {
             dispatch(pageActions.setPage(page));
         } else {
             LocalStorage.setData('page', 1);
+            dispatch(pageActions.setPage(1));
         }
 
         const amount = LocalStorage.getFromLocalStorage('amount');
@@ -28,6 +29,7 @@ const App = () => {
             dispatch(amountActions.setAmount(amount));
         } else {
             LocalStorage.setData('amount', '10');
+            dispatch(amountActions.setAmount('10'));
         }
     });
 
